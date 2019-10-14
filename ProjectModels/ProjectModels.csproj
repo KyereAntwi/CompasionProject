@@ -32,6 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.2.0\ref\netcoreapp2.2\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,6 +45,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Academics\AcademicTerm.cs" />
+    <Compile Include="Models\Academics\Class.cs" />
+    <Compile Include="Models\Academics\Department.cs" />
+    <Compile Include="Models\Academics\DepartmentSubject.cs" />
+    <Compile Include="Models\Academics\Subject.cs" />
+    <Compile Include="Models\Academics\Transcript.cs" />
+    <Compile Include="Models\Challenge.cs" />
+    <Compile Include="Models\Child.cs" />
+    <Compile Include="Models\ChildChallenge.cs" />
+    <Compile Include="Models\ChildNeed.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Sponser.cs" />
+    <Compile Include="Models\SponserActivities\Letter.cs" />
+    <Compile Include="Models\SponserActivities\TakeCare.cs" />
+    <Compile Include="Models\SponserActivities\Visit.cs" />
+    <Compile Include="Models\SponserActivities\Volunteer.cs" />
+    <Compile Include="Models\Talent.cs" />
+    <Compile Include="Models\Worker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

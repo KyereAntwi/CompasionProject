@@ -5,12 +5,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApp.Data;
+using App.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ServiceLayer.Data;
 
-namespace WebApp
+namespace App
 {
     public class Startup
     {
@@ -31,15 +31,15 @@ namespace WebApp
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<ServiceLayerDbContext>(options => 
+            services.AddDbContext<ServiceLayerDbContext>(options =>
                 options.UseSqlServer(
-                Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("WebApp")));
+                Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("App")));
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentity<IdentityUser, IdentityRole>(options => 
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
             {
                 //user settings
                 options.User.RequireUniqueEmail = true;
