@@ -33,5 +33,6 @@ namespace ServiceLayer.Data
         public DbSet<Letter> Letters { get; set; }
         public DbSet<TakeCare> TakeCares { get; set; }
         public DbSet<Volunteer> Volunteers { get; set; }
+        public DbSet<Visit> Visits { get; set; }
     }
 }

@@ -9,6 +9,7 @@ using App.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ServiceLayer.Data;
+using ServiceLayer.Repositories;
 
 namespace App
 {
@@ -50,6 +51,8 @@ namespace App
             })
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddScoped<IServiceRepo, ServiceRepo>();
 
             services.AddMvc()
                 .AddJsonOptions(
